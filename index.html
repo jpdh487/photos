@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Le site n'apparaît pas dans Google : seules les personnes qui ont le lien peuvent le trouver. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Nos photos de famille</title>
+  <meta name="description" content="Les albums photo de la famille : à regarder, noter et télécharger.">
+  <meta property="og:title" content="Nos photos de famille">
+  <meta property="og:description" content="Les albums photo de la famille : à regarder, noter et télécharger.">
+  <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://script.google.com">
+  <link rel="preconnect" href="https://script.googleusercontent.com">
+  <link rel="preconnect" href="https://lh3.googleusercontent.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div id="app"><div class="state"><div class="loader"></div></div></div>
+
+  <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Visionneuse de photos">
+    <div class="lb-top">
+      <span class="lb-count" id="lb-count"></span>
+      <button class="lb-icon" id="lb-close" type="button" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="lb-stage" id="lb-stage">
+      <div class="lb-frame" id="lb-frame">
+        <img id="lb-lo" alt="">
+        <img class="lb-hi" id="lb-hi" alt="">
+      </div>
+      <button class="lb-icon lb-nav lb-prev" id="lb-prev" type="button" aria-label="Photo précédente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="lb-icon lb-nav lb-next" id="lb-next" type="button" aria-label="Photo suivante">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <div class="lb-bottom">
+      <p class="lb-caption" id="lb-caption"></p>
+      <div class="lb-actions">
+        <div class="rating">
+          <div class="stars" id="lb-stars" role="group" aria-label="Noter cette photo"></div>
+          <span class="lb-score" id="lb-score"></span>
+        </div>
+        <a class="btn-dl" id="lb-dl" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
+          Télécharger
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="assets/api.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
